@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+
+  <style>
+    body{
+      width: 100vw;
+      height: 100vh;
+    
+      
+    }
+    #nav{
+      margin-top: 20px;
+      margin-left: 20px;
+      width: 100px;
+      height: 150px;
+      background-color: rgb(175, 192, 208);
+    }
+
+    ul{
+      list-style: none;
+      padding: 10px;
+    }
+
+    ul li{
+      display: block;
+      
+    }
+   li:hover{
+    background-color: aqua;
+    cursor: pointer;
+   }
+#drow{
+   margin: 30px;
+  transition: all 2s ;
+
+}
+#hello{
+  display: none;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  background-color: aqua;
+  text-align: center;
+  box-shadow: 5px 5px 5px red;
+}
+    #drow:hover #hello{
+      display: block;
+      
+      
+    }
+#gra{
+  height: 300px;
+  width: 500px;
+  border: 2px solid black;
+  background-image: linear-gradient(to right,orange ,rgb(255, 255, 255),green);
+}
+    #btn{
+      margin: 30px;
+      display: inline-block;
+      background-color: rgb(122, 63, 63);
+      padding: 8px 18px ;
+      color: wheat;
+      position: relative;
+      z-index: 1;
+     
+    }
+
+    #btn::before{
+      content: "";
+      background-color: black;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      transform: scaleX(0);
+      transition: all 1s;
+      transform-origin: left;
+
+    }
+
+    #btn:hover::before{
+      transform: scaleX(1);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+   <div id="nav">
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Services</li>
+      <li>Contact Us</li>
+      <li>Hello</li>
+    </ul>
+   </div>
+   <div id="drow">
+     <p>Hello</p>
+     <div id="hello">
+       <h1>Hellow Guys!</h1>
+     </div>
+   </div>
+   <div id="gra">
+    
+   </div>
+
+   <div id="btn">
+     <p>Hire Me</p>
+   </div>
+</body>
+</html>
